@@ -1,4 +1,7 @@
 #loadinganim.py
+import time
+import os
+
 def loadinganim(times, clear):
     for i in range(times):
             if clear == True:
