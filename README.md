@@ -1,4 +1,4 @@
-# WinPY
+# Python Package Installer
 
-This is an Python Library Installer that im building
-This is for my Python Modules that you can download!
+This is PPI, An python module installer for Linux Ubuntu
+This where you can download my Python modules.
