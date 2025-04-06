@@ -39,7 +39,8 @@ os.system('clear')
 print('PPI:')
 print('1. Install Module')
 print('2. List Modules')
-print('3. Exit')
+print('3. Update Installer')
+print('4. Exit')
 print()
 choice = input('> ')
 if choice == '1':
@@ -76,6 +77,13 @@ elif choice == '2':
     input('')
 elif choice == '3':
     os.system('clear')
+    print('Getting installer.py')
+    installer = requests.get('https://raw.githubusercontent.com/AaronVerdep/PPI/refs/heads/main/installer.py')
+    with open('upd_installer.py', 'wb') as updinstaller:
+        updinstaller.write(installer)
+    os.system('clear')
+    print('Updated! Deleting old installer')
+    os.system('rm installer.py')
     exit()
 ''')
 
