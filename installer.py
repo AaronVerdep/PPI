@@ -80,7 +80,7 @@ elif choice == '3':
     print('Getting installer.py')
     installer = requests.get('https://raw.githubusercontent.com/AaronVerdep/PPI/refs/heads/main/installer.py')
     with open('upd_installer.py', 'wb') as updinstaller:
-        updinstaller.write(installer)
+        updinstaller.write(installer.content)
     os.system('clear')
     print('Updated! Deleting old installer')
     os.system('rm installer.py')
