@@ -85,6 +85,9 @@ elif choice == '3':
     print('Updated! Deleting old installer')
     os.system('rm installer.py')
     exit()
+elif choice == '4':
+    os.system('clear')
+    exit()
 ''')
 
     print('Installed PPI!')
