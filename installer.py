@@ -38,7 +38,8 @@ import requests
 os.system('clear')
 print('PPI:')
 print('1. Install Module')
-print('2. Exit')
+print('2. List Modules')
+print('3. Exit')
 print()
 choice = input('> ')
 if choice == '1':
@@ -61,9 +62,21 @@ if choice == '1':
         os.system('clear')
         print('Exiting...')
         exit()
-else:
+elif choice == '2':
     os.system('clear')
-    print('Exiting...')
+    url = "https://api.github.com/repos/AaronVerdep/PPI/contents/pkgs"
+    response = requests.get(url)
+    
+    if response.status_code == 200:
+        files = response.json()
+        for file in files:
+            print(file['name'])
+    else:
+        print("Error:", response.status_code)
+    input('')
+elif choice == '3':
+    os.system('clear')
+    exit()
 ''')
 
     print('Installed PPI!')
