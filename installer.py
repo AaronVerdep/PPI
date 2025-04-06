@@ -82,8 +82,7 @@ elif choice == '3':
     with open('installer.py', 'wb') as updinstaller:
         updinstaller.write(installer.content)
     os.system('clear')
-    print('Updated! Deleting old installer')
-    os.system('rm installer.py')
+    print('Updated!')
     exit()
 elif choice == '4':
     os.system('clear')
