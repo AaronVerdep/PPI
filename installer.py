@@ -49,7 +49,7 @@ if choice == '1':
     moduleinput = input('> ')
     os.system('clear')
     print('Installing Module: ' + moduleinput)
-    module = requests.get(f'https://raw.githubusercontent.com/AaronVerdep/PPI/refs/heads/main/pkgs/{moduleinput}.py')
+    module = requests.get(f'https://raw.githubusercontent.com/zerousers-dev/PPI/refs/heads/main/pkgs/{moduleinput}.py')
     if module.status_code == 200:
         with open(f'/home/{os.getlogin()}/{moduleinput}.py', 'wb') as f:
             f.write(module.content)
@@ -65,7 +65,7 @@ if choice == '1':
         exit()
 elif choice == '2':
     os.system('clear')
-    url = "https://api.github.com/repos/AaronVerdep/PPI/contents/pkgs"
+    url = "https://api.github.com/repos/zerousers-dev/PPI/contents/pkgs"
     response = requests.get(url)
     
     if response.status_code == 200:
@@ -78,7 +78,7 @@ elif choice == '2':
 elif choice == '3':
     os.system('clear')
     print('Getting installer.py')
-    installer = requests.get('https://raw.githubusercontent.com/AaronVerdep/PPI/refs/heads/main/installer.py')
+    installer = requests.get('https://raw.githubusercontent.com/zerousers-dev/PPI/refs/heads/main/installer.py')
     with open('installer.py', 'wb') as updinstaller:
         updinstaller.write(installer.content)
     os.system('clear')
